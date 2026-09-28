@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ArchitectureDiagram from '../components/ArchitectureDiagram.astro';
+import InvariantsSection from '../components/InvariantsSection.astro';
+import TearSheetsSection from '../components/TearSheetsSection.astro';
+import TechStackSection from '../components/TechStackSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="NeoNix Quantitative Research & Systems Lab"
+  description="Deterministic research, causal trading architectures, and exact double-entry replay engines for systematic markets."
+>
+  <Header />
+  <main>
+    <Hero />
+    <ArchitectureDiagram />
+    <InvariantsSection />
+    <TearSheetsSection />
+    <TechStackSection />
+  </main>
+  <Footer />
+</Layout>

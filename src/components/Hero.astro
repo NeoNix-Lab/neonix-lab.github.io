@@ -1,0 +1,88 @@
+---
+---
+
+<section id="thesis" class="relative pt-20 pb-16 md:pt-28 md:pb-24 border-b border-slate-800/60 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Top badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/70 text-xs font-mono text-slate-300 mb-8 shadow-inner">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Wave 5 Supervised Golden Acceptance: PASS</span>
+      <span class="text-slate-500">|</span>
+      <span class="text-cyan-400">Zero Lookahead Invariant</span>
+    </div>
+
+    <!-- Main headline -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.15]">
+      Deterministic Research.<br />
+      <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
+        Causal Trading Architecture.
+      </span><br />
+      Provable Alpha.
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">
+      Most backtests lie because of subtle lookahead leakage, floating-point rounding drift, and naive fill assumptions. 
+      <strong class="text-slate-100 font-semibold">NeoNix Lab</strong> builds institutional-grade quantitative systems where every hypothesis is verified against monotonic causality, double-entry ledgers, and purged out-of-sample lockboxes.
+    </p>
+
+    <!-- CTAs & Proof points -->
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a
+        href="#architecture"
+        class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-cyan-500/20 font-mono flex items-center gap-2"
+      >
+        <span>Explore Architecture</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+
+      <a
+        href="#tearsheets"
+        class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700/80 font-medium text-sm transition-all font-mono"
+      >
+        <span>View Research Tear Sheets</span>
+      </a>
+
+      <a
+        href="https://github.com/NeoNix-Lab/quant-platform/discussions"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-4 py-2.5 rounded-lg text-slate-400 hover:text-cyan-300 text-sm font-mono flex items-center gap-1.5 transition-colors"
+      >
+        <span>Community RFCs (#182–#186)</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Metric Cards Grid -->
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Temporal Invariant</div>
+        <div class="mt-1 text-xl font-bold font-mono text-cyan-400">t_avail ≤ t_dec</div>
+        <div class="mt-1 text-xs text-slate-400">Zero lookahead or future-leakage guarantee</div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Accounting Engine</div>
+        <div class="mt-1 text-xl font-bold font-mono text-emerald-400">Decimal (H04)</div>
+        <div class="mt-1 text-xs text-slate-400">Double-entry exact ledger, zero float drift</div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Execution Separation</div>
+        <div class="mt-1 text-xl font-bold font-mono text-slate-100">DecisionIntent</div>
+        <div class="mt-1 text-xs text-slate-400">Alpha policies decoupled from execution state</div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Acceptance Gate</div>
+        <div class="mt-1 text-xl font-bold font-mono text-teal-400">Golden E2E PASS</div>
+        <div class="mt-1 text-xs text-slate-400">Verified on Bybit BTCUSDT tick-level data</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,137 @@
+---
+---
+
+<section id="architecture" class="py-20 border-b border-slate-800/60 bg-[#06090F]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-block text-xs font-mono font-semibold tracking-wider text-cyan-400 uppercase bg-cyan-950/40 px-3 py-1 rounded-md border border-cyan-800/40 mb-3">
+        The Target Architecture
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+        A Causal Multi-Tier Pipeline
+      </h2>
+      <p class="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+        From raw uncompressed exchange feeds to deterministically reconciled double-entry equity. 
+        Each layer operates behind frozen contract interfaces, preventing semantic bleed.
+      </p>
+    </div>
+
+    <!-- Architecture Pipeline Flow -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+      <!-- Tier 1 -->
+      <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 transition-colors group flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-cyan-400 mb-3">
+            <span>Tier 01</span>
+            <span class="px-1.5 py-0.5 rounded bg-cyan-950 border border-cyan-800/40 text-[10px]">Data Plane</span>
+          </div>
+          <h3 class="text-base font-semibold text-white group-hover:text-cyan-300 transition-colors">DataGateway</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">
+            Catalog-backed reader over partitioned Parquet storage. Monotonic timestamp cursor enforcing publication-delay floors.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-800/60 font-mono text-[10px] text-slate-500">
+          `DataGateway.scan()`
+        </div>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 transition-colors group flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-cyan-400 mb-3">
+            <span>Tier 02</span>
+            <span class="px-1.5 py-0.5 rounded bg-cyan-950 border border-cyan-800/40 text-[10px]">Features</span>
+          </div>
+          <h3 class="text-base font-semibold text-white group-hover:text-cyan-300 transition-colors">Feature Registry</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">
+            Strict point-in-time materialization. Eliminates forward-looking rolling calculations and normalizes continuous market states.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-800/60 font-mono text-[10px] text-slate-500">
+          `FeatureSetDefinition`
+        </div>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition-colors group flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-teal-400 mb-3">
+            <span>Tier 03</span>
+            <span class="px-1.5 py-0.5 rounded bg-teal-950 border border-teal-800/40 text-[10px]">Intelligence</span>
+          </div>
+          <h3 class="text-base font-semibold text-white group-hover:text-teal-300 transition-colors">Policy Layer</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">
+            Rule-based alphas, Supervised ML (Wave 5), and Causal RL policies (RFC #183). Generates typed intent without order book coupling.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-800/60 font-mono text-[10px] text-slate-500">
+          `DecisionIntent`
+        </div>
+      </div>
+
+      <!-- Tier 4 -->
+      <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-colors group flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-emerald-400 mb-3">
+            <span>Tier 04</span>
+            <span class="px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-800/40 text-[10px]">Replay H01</span>
+          </div>
+          <h3 class="text-base font-semibold text-white group-hover:text-emerald-300 transition-colors">Order Engine</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">
+            Deterministic matching simulator. Applies realistic spreads, order book queues, slippage models, and exchange maker/taker fee tiers.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-800/60 font-mono text-[10px] text-slate-500">
+          `ReplayEngine`
+        </div>
+      </div>
+
+      <!-- Tier 5 -->
+      <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-colors group flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-emerald-400 mb-3">
+            <span>Tier 05</span>
+            <span class="px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-800/40 text-[10px]">Ledger H04</span>
+          </div>
+          <h3 class="text-base font-semibold text-white group-hover:text-emerald-300 transition-colors">Double-Entry Core</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">
+            Exact fixed-scale Decimal accounting. Immutable transaction journals preserving capital conservation laws down to fractional ticks.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-800/60 font-mono text-[10px] text-slate-500">
+          `LedgerEntry (Decimal)`
+        </div>
+      </div>
+    </div>
+
+    <!-- Architectural Guarantees Box -->
+    <div class="mt-10 p-6 rounded-2xl bg-gradient-to-r from-slate-900/90 via-slate-900/50 to-slate-900/90 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0 font-mono text-xl font-bold">
+          !
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-slate-100 font-mono">The Fundamental Design Constraint</h4>
+          <p class="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">
+            Alpha models cannot execute trades directly; Execution engines cannot modify alpha parameters; Ledgers cannot fabricate capital. 
+            All state mutations follow deterministic finite state machine (FSM) rules verified in CI.
+          </p>
+        </div>
+      </div>
+
+      <div class="shrink-0 flex items-center gap-3">
+        <a
+          href="https://neonix-lab.github.io/quant-platform/architecture/target_architecture/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs font-mono text-cyan-400 hover:text-cyan-300 underline underline-offset-4 flex items-center gap-1"
+        >
+          <span>Read Full Architecture Spec</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
